@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
 
 ext {
     bintrayRepo = 'android-folder-picker-library'
@@ -8,7 +8,7 @@ ext {
     publishedGroupId = 'lib.kashif'
     libraryName = 'android-folder-picker-library'
     artifact = 'folderpicker'
-    libraryVersion = '2.4'
+    libraryVersion = '2.5'
 
     libraryDescription = 'A lightweight android library for picking folders and files.'
 
@@ -25,16 +25,16 @@ ext {
 }
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 27
-        versionCode 4
-        versionName "2.4"
+        targetSdkVersion 29
+        versionCode 5
+        versionName "2.5"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
     }
     buildTypes {
@@ -47,12 +47,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     androidTestImplementation 'junit:junit:4.12'
 }
 
 //To publish library to bintray
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
